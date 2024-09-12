@@ -24,14 +24,14 @@ class ProgrammingLanguagePopularity:
         )
 
 
-def cell_to_string(element: etree.Element) -> str:
+def cell_to_string(element: etree._Element) -> str:
     texts = list(map(lambda x: x.strip(), element.itertext()))
     text = "".join(texts).strip()
     return re.sub(r"\[\d+\]|\n", "", text)
 
 
 # Expects popularity in the following formats: 1,000,000; 1.000.000. Extracts only the number
-def get_popularity(popularity_cell: etree.Element) -> int:
+def get_popularity(popularity_cell: etree._Element) -> int:
     text = cell_to_string(popularity_cell).replace(",", "").replace(".", "")
     if " " in text:
         text = text.split(" ")[0]

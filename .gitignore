@@ -7,3 +7,6 @@
 # Python cache
 .pytest_cache
 __pycache__
+
+# MyPy chache
+.mypy_chache

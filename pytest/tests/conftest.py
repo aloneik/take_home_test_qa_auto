@@ -42,7 +42,7 @@ def programming_language_popularity() -> List[ProgrammingLanguagePopularity]:
             frontend=cell_to_string(columns[frontend_tech_col]).split(","),
             backend=cell_to_string(columns[backtend_tech_col]).split(","),
             database=cell_to_string(columns[database_col]).split(","),
-            notes=cell_to_string(columns[note_col]).split(","),
+            notes=cell_to_string(columns[note_col]),
         )
 
         programming_language_popularity.append(popularity_table_row)
